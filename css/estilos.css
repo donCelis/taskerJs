@@ -1,0 +1,179 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+	list-style: none;
+	outline: 0;
+}
+body{
+	font-family: 'Montserrat', sans-serif;
+	background: rgb(41, 128, 185);
+}
+/*
+	colores
+	verde: rgb(22, 160, 133);
+	azul: rgb(41, 128, 185);
+	mediaNoche: rgb(44, 62, 80);
+	rojo: rgb(231, 76, 60);
+*/
+.verde{
+	color: rgb(22, 160, 133) !important;
+	pointer-events: none;
+}
+.error::placeholder{
+	color: rgb(231, 76, 60);
+}
+.mover{
+	animation: alerta 0.5s ease-in-out running;
+}
+.tachar{
+	text-decoration: line-through;
+	color: gray;
+}
+.iconM{
+	fill: rgb(41, 128, 185);
+	width: 35px;
+	height: 35px;
+}
+.app{
+	width: 50%;
+	min-width: 540px;
+	margin: 0 auto;
+	background: white;
+	position: relative;
+	border-radius: 10px;
+}
+.app header{
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+	width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.titulo{
+	font-weight: 300;
+}
+.app > section{
+	width: 100%;
+}
+#formulario div{
+	width: 90%;
+  margin: 20px auto;
+}
+/*
+	Animación para el input
+*/
+@keyframes alerta{
+	0%{
+		transform: translateX(0);
+	}
+	25%{
+		transform: translateX(10px);
+	}
+	50%{
+		transform: translateX(-10px);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
+#entrada{
+	width: 100%;
+	padding: 16px;
+	font-size: 1em;
+	border-radius: 30px;
+	border: 1px solid rgba(44, 62, 80, 0.5);
+	font-family: 'Montserrat', sans-serif;
+}
+.tareas{
+	height: 460px;
+	overflow-y: scroll;
+}
+.tareas div:first-child{
+	margin: 20px auto;
+}
+.tareas div{
+	display: flex;
+	flex-wrap: row wrap;
+	align-items: center;
+	justify-content: space-between;
+	width: 90%;
+	margin: 30px auto;
+	padding: 15px 20px;
+	box-shadow: 0px 2px 10px 0px rgba(44, 62, 80, 0.2);
+	border-radius: 50px;
+	background: white;
+}
+.ok{
+	font-size: 2em;
+	color: white;
+	cursor: pointer;
+	box-shadow: 0px 2px 10px 0px rgba(44, 62, 80, 0.2);
+	border-radius: 100%;
+}
+.app footer{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	padding: 10px 0;
+}
+.iconAdd{
+	font-size: 2em;
+	background: rgb(41, 128, 185);
+	color: white;
+	padding: 20px 22px;
+	border-radius: 100%;
+	cursor: pointer;
+}
+.sesionIn{
+	height: 600px;
+	padding-top: 100px;
+}
+.sesionIn div{
+	width: 90%;
+	margin: 35px auto;
+	position: relative;
+}
+.sesionIn div i{
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 16px 22px;
+	font-size: 1.2em;
+	color: rgb(41, 128, 185);
+}
+.sesionIn div input{
+	width: 100%;
+	padding: 16px;
+	font-size: 1em;
+	border-radius: 30px;
+	border: 1px solid rgba(44, 62, 80, 0.5);
+	transition: .2s ease-in-out;
+	font-family: 'Montserrat', sans-serif;
+}
+.sesionIn div input:focus{
+	border: 1px solid rgb(41, 128, 185);
+}
+.iniSesion input{
+	background: rgb(41, 128, 185);
+	color: white;
+	border: none !important;
+	cursor: pointer;
+}
+.sesionActiva{
+	display: none;
+}
+.iniciarSesion{
+	display: none;
+}
+.cerrar{
+	color: rgb(231, 76, 60);
+	cursor: pointer;
+	font-size: 2em;
+	display: none;
+}
