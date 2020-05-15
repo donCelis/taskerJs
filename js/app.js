@@ -10,7 +10,7 @@
 	--Anidar tareas
 */
 
-const firebaseConfig = {
+/* const firebaseConfig = {
 	apiKey: "AIzaSyBbCq8NiyEfPbkII91QzbhAqa8VcPAZo68",
 	authDomain: "listatareasf1829152.firebaseapp.com",
 	databaseURL: "https://listatareasf1829152.firebaseio.com",
@@ -18,7 +18,7 @@ const firebaseConfig = {
 	storageBucket: "",
 	messagingSenderId: "5124718614",
 	appId: "1:5124718614:web:b8aa39aa3bb5d3ec"
-};
+}; */
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -164,14 +164,6 @@ function sesionActiva(){
 			console.log('la sesión esta activa');
 			let providerData = user.providerData;
 			console.log(providerData);
-			/*user.updateProfile({
-				displayName: "Alexander Celis",
-				photoURL: "https://lh3.googleusercontent.com/a-/AAuE7mBd8R2eyFheqihFu1TV4QCs6pwbg369VlCjWctD-A=s96"
-			}).then(()=>{
-				console.log('Update successful.');
-			}).catch((error)=>{
-				console.log('An error happened.');
-			});*/
 		} else {
 			seleIniciarSesion.style.display = 'block';
 		}
